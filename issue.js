@@ -1,9 +1,14 @@
-// The widget will appear when the user selects text in the document.
-// This text is quoted, and clicking the button will take the user to the
-// GitHub ‘New Issue’ form.
+// issue.js provides a widget that will appear in HTML documents when
+// text is selected that allows extraction of prose to form quotations of
+// new GitHub issues.
 //
-// Configure by setting the GitHub project URL and any parameter fields
-// in the new issue form you want populated:
+// The widget will appear when the user selects text in the document.
+// When clicking the button that appears, the selected text is quoted,
+// along with references to the chapter and section from whence the quote
+// came, in the new GitHub issue that is created.
+//
+// Configure by setting the GitHub project URL and any optional parameter
+// fields in the new issue form you want populated:
 //
 // 	<html
 // 	 data-issue-url="https://github.com/w3c/webdriver"
@@ -13,7 +18,7 @@
 // bug tracker.
 //
 // © 2016 Andreas Tolfsen <ato@mozilla.com>
-// Licensed under the BSD license.
+// Licensed under the MIT license.
 
 document.addEventListener("DOMContentLoaded", function() {
 	"use strict";
